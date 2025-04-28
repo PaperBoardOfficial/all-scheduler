@@ -1,0 +1,202 @@
+Request URL:
+https://calendly.com/api/booking/event_types/lookup?event_type_slug=30min&profile_slug=codingtalks123
+Request Method:
+GET
+Status Code:
+200 OK
+Remote Address:
+172.64.146.81:443
+Referrer Policy:
+strict-origin-when-cross-origin
+cache-control:
+max-age=0, private, must-revalidate
+cf-cache-status:
+DYNAMIC
+cf-ray:
+9353dd3d0fa1a778-DEL
+content-encoding:
+br
+content-type:
+application/json; charset=utf-8
+date:
+Thu, 24 Apr 2025 07:25:01 GMT
+etag:
+W/"2fa94eb82348c8d29b90f6ccbd56e484"
+referrer-policy:
+strict-origin-when-cross-origin
+server:
+cloudflare
+set-cookie:
+referrer_user_id=42855364; path=/; expires=Thu, 08 May 2025 07:25:00 GMT; secure; HttpOnly; SameSite=Lax
+set-cookie:
+_calendly_session=2RQjTGwUM2JSCy7LSSFiIL5g41D7axQ6UWw9Bgh6uyyvmxoVjudhEAaLUuPWkourJZhhqMScALxavg%2F67VwDClU558HGaNSpyubBHjfDfM%2B3GxPxYKWxHJl0cId2p2JRhxfhrwG1LtE0oEAPcnOV9y0oQWCPkB720YFWhNvM%2B6%2FmxFUETbLQhc3WrNsq1nBt6f4sBJGg3nWZH4%2Fx%2BO9QwXbSYHpLXTjlQuw15vFgAu28IOB9B4%2BEAuavJo8nR3Y11%2Fwl6E4pFafB58zRs8h0W2H%2BcKy9k19VIDncGiiM1%2FKVhS0t%2FwWfmgwf2XZjbd9BLcN5wBTDFYDHHZzymVVUNec28%2BVGz28jBk0Uqd8sebxk3cOaUluG8sabJGdyFaciv1XOq8VIaCqN4eY4UCYgxmhbmNz9mE3OwuJIM1BZFFV%2BA4AHkh%2FjHf5tHIran%2FuinH6rzMPGjy%2BVIsLgLyFgJnBWh%2BVsEy7mhWLBo0RGdRAaXYTRdWLNFFKwSg4j9Nz8a0I4Txat%2Fd8vzLpilyFx1dK6nAqFjoyK5weWBPW6TQbVzQFHhFIqN6igbcO2cXMNJyWR7cklC28fcVKFTjrisjHj9Bpx1cIssmHOvWH%2BrNhOM1ON3VvYutQBo9Q0%2BSP151nUxrhJRsKwQgxuMwXFjLLXdSFphDjcyRFjCn2of85a0%2F%2Fz7tVyO8EkYfWOhXngBICsxilTsJ2MPkq7s9KLj2h59plvM4rPtsMQYxFiYozkI%2BeCYE2I9ET%2B26G16c67mgm9NXmx%2BlL%2Fft4sf02vmCQr%2FpI%2BL2H%2FMFYehe5EHrf58EJ5Nc6zVyMLhhPXKWDj0nk4kugVFF42tVqpfm1jQ3S3FTn29UdDw4ylcDM1sE4nkG5Obz3X%2FmVjaqKAAoCf%2BIV04DXOX92oOva0yJt5gYfvt89Mk%2FW2b4wp0m6NlJ%2BREGBckMn6JYOXRbIm9lr9Us9rg2UCjCxIyA9AsK3KzsXxwHGWlxOWbMxbjiraorcNLw8Hw3HQvOZBjF29b6ShneQHqIcnZ1cM9q2ESBTbKSo3PVvsmx6lVhVT0Q21OSFjnl2qw2qnN3J0Jj0W291KUJv8LdEjqirT6ODrvgo0W1GYaNSZDVgJb%2BpQ4jw9BNUoJGDv%2B0v%2BVzCvgLc9T7jQq5vjCGpNkTLah%2Bhi8wGD4tLypcMnM6nKJ3%2Bf77TAN%2Fj4qJo%2F0HyHb2pOeMP7VTfZ9aOQog6TxgrgfPRqSv%2FVYpdwLlWcWn97f1ajh1GQ5bJTny7GP7bpRKoLObKHWHHvB0cWiOzbF9VEk5qD6L8stXfOqJkRhIxIBVWtBzR0Y3V8wgWC7XxVSCeGFHsynP%2FhWQpCdVIe8STSwIuiIUVEd23GPzv5omuR5o4ptoo53oF7E92Ai56HCTPeN1m4rzYCuEcVs16ezk7X5YSWsjxeLQT4taQm5uVn7taF2%2BPNj6VDYWaHe9glHUK110%2BDejv6%2FyA1x3y9DWN%2BHy7MnrQkfaYrUVwc8xaPjYkCujMcEQHyUS3T53ACtI5M9Yjw6ufDUmg6PRptOxXbUaZgDexgv%2BXxPsXKV5vQ6oQF0OWKJQ%3D%3D--sSzmIbhd4wxjDqxS--qd86pp1LuxihNq1pbnQ3Gw%3D%3D; path=/; expires=Thu, 15 May 2025 07:25:00 GMT; secure; HttpOnly; SameSite=Lax
+strict-transport-security:
+max-age=31536000; includeSubDomains; preload
+vary:
+Accept-Encoding
+x-content-type-options:
+nosniff
+x-frame-options:
+ALLOWALL
+x-request-id:
+b7163985ca576b9205138c6c5063fef0
+x-runtime:
+0.400950
+:authority:
+calendly.com
+:method:
+GET
+:path:
+/api/booking/event_types/lookup?event_type_slug=30min&profile_slug=codingtalks123
+:scheme:
+https
+accept:
+*/*
+accept-encoding:
+gzip, deflate, br, zstd
+accept-language:
+en-GB,en-US;q=0.9,en;q=0.8
+cookie:
+optimizelyEndUserId=oeu1745339091136r0.1155792868631208; _swb=ad0073d5-cbe5-48f6-ad93-5f30a3ea05f8; gdpr_trackable=true; login_email=codingtalks123%40gmail.com; growth_a_vs_a_encountered=true; gsg_encountered=true; _upscope__region=ImFwLXNvdXRoZWFzdCI=; OptanonAlertBoxClosed=2025-04-22T16:39:43.159Z; _upscope__shortId=IkRMR0JFRU5ITTUzRlRZTlFOIg==; __stripe_mid=0395d8c7-a3bd-4b8a-97fe-06d8614dace46da3a7; calendly_idd_id_e1dbefd2-f2ec-4747-993a-d18bed7431da=9pE4cjf1CyfO4NQitTbUTMoTsvS8picS5MVFpXCz4%2FsNm%2BNK9B45krOkXWLmcxAuLgAyFmvunF7ozkEvq%2FTDypLPnQygf5wD%2Fe1Ec1cwKqbQWIB6KXDX197qODWqSzweAdDJjCkkWBsqQJRWq6LvHtoRjBzjmgGCqUOWLoquxpWyuxNaGObf7PSJQAyBbTkAI8UUg%2BkTt0%2Fxd6ClB2x%2BXWgU4IDpfQ13Qh0JznA0v9CrGMp8Db9V2RCt--NktU4idRVF5AnILT--lYSD0KmKnj1aWMwruqgOWA%3D%3D; optimizelySession=0; __cfruid=e368fd2b703e95bc78eaf3d1a3184481275f4d12-1745475171; _cfuvid=ecluAPFavONKju1_yG6_zBIlLaKIqqH0KYCCd2F8ZI8-1745475171287-0.0.1.1-604800000; __stripe_sid=c0684e6f-18f2-42b2-8d40-aa8e5358a346c113eb; referrer_user_id=42855364; __cf_bm=TOLknA_Wa53w1hPKwjMHJGmDWNQ_06Hje22unqtWRvo-1745479483-1.0.1.1-pVVeMqmNRzpJs7ztAnwDGdEM4p9mdrwOE0gAvnaA2Z07ZEaeZQood3BEHUMHJMhFn3oKGSGU6Se8.AaGyr8zjNYyR2oKsgARA_lhX._CIzs; OptanonConsent=isGpcEnabled=0&datestamp=Thu+Apr+24+2025+12%3A54%3A47+GMT%2B0530+(India+Standard+Time)&version=202501.1.0&browserGpcFlag=0&isIABGlobal=false&hosts=&consentId=2b9e2c94-39a4-45c6-949c-168e8ec100b4&interactionCount=1&isAnonUser=1&landingPath=NotLandingPage&groups=C0001%3A1%2CC0003%3A1%2CC0002%3A1%2CC0004%3A1&intType=1&geolocation=IN%3BCH&AwaitingReconsent=false; _calendly_session=qRC07zmdDQjW0hX40yEIZ5bIBQN1%2FKqbwSYjtFRQbtew79JhgqrRvnDj8x8HSHzfb1x3tIQ3OBk08oaunDtAo8Rgjg0g3Mp2KRon5kWyhyNMSi3uEVRg9mGhU%2BLPeE2bcAuKoiqBc8A5thz14CF1BjoxBCpfDzG0ex3rK%2B%2BmrHovZ6jQwYrlxrMfWJ2355hCtMZTQHrj0d8CRTfERsCTb%2B7bvYTVMkR1pqKaU1gNF%2Brr9b2PRq6P9OFUqQuWPUqGCL01LXYXboEXF4vJq9dqMETSTzMIvCcUIvXHVjc6sOUEpqQmZ%2Bx5EIoFmdRZxeSkQ2mv6ioFK3b%2FytIq%2FPWjesvnwSWeDBV3GLJu%2B7EbZLsPC3A3mNrRhBryQFbSIUm%2BYBemIiuFLpGt1YoySQfzVmf%2BF0PeOWoYB7ZGmYxLn9VaX28AQ8FChXXT4J4bC1dJs30KAxQh%2FFhl%2FQQab6%2F%2FGcwyoEvoptwxxGVjFaBrI%2BNaoluZl5O7DA9zrsCShSmarctCytVPDonyHbu0vYHvQRUU%2FioHqqEcKMqd9NQh7T733V93B1SjF1Tbj2rumpR3G3Ja605%2FffIIEYiGa5%2Bjf5nAG2qd%2Btob5T1tOes01%2FEXYm3gifxY7rVQcDpLxtb%2FKd1suqYSdxo2Po3uOndFH53CTsRCs5Bt0PfJt7pFnO8jqDss9YMRneVCDBNGCPaN8l6%2FE00NdMd7NzBwKK7OYNVOyOjXQha4f6nLoKGhYmbSrivkjUQOgtIwB4mw%2FL5vD%2FRADe6miCOkMlYl8oDo%2BUNlgah5jfmMaffErb%2Fu9wTGPzXgduppY3h28Ysx8QZXvtcOJd8ycWTp0ikHb9T93Z7fmVReJqF2viTQNF4lF56Bp6EFxrDr5XB0IE97xeeuyu%2B%2BN38r6DmwicKpkwP6zKl6yKAn%2FqaT3GYW%2F2%2BxCLqsjYIerOrn4wC%2Bja95vL7UzakRzM48CuSziHwpaTdqhhpP4lG0Km8pJiCwb29WVRNUzoi69qCxJY8Q%2FkbeWieo9m2KzPCfWDyZYi4T%2BFW1Ru01jKtK3hoRJw1V6z9oWoH1Drnwkxv%2B5Y26bzsMYDdavAXXDo2YjZBr%2B%2F7VaSr5iHBCH4PEnV44jrbvVLJGmz9xzGPDHhCpo58Sx1odyBPES12ET6cdULDiGSB3KWtwUCkx3ViArCI0JHCqzOhp%2B4W2506cKGEzz7%2FcInUzJWx9ayqhfv29qA4X5PCG0pN23aiEcHamEEUOgXRnQIQPLvHNU4tk88r7EP%2B%2B0ZO50NwrBsEKcpfq8E7H4lDyvbMmktXUw6fQTRLPn0u%2BfhpsyYx6U6641j93t0yEpBsA0UUzVqv%2FoyKRlZRmzKxH4wGtD6fYveK2JTAlfl07TGTqfND99atEG5fX4muaKTJtNSM7QNIwtO3y2PMraQiqsLPTZViqzESegx0FA%2FaNzxzqe9MuiZ68m9EX%2BS7xvx4nl%2Bh%2BuoV5bOv66egCW%2FrVJD3ZuP7RULO2tT8kpkIOYrWCSXGr6aJQ4mAY%2FtpKjskg59YpsX%2FjlvO%2BmNblEAXO%2BZRgNXepKJp5jQxSOymKiKC6IQ%3D%3D--5SUJJ35HzmXeO87D--MRhmIEwN%2FmidVhCXWczIDw%3D%3D; _dd_s=logs=1&id=579a1ccc-04d9-41ca-832b-4216aa64cfbb&created=1745477393689&expire=1745480400112&rum=0
+if-none-match:
+W/"1419a88ba4208302657c0deb3afd9fae"
+priority:
+u=1, i
+referer:
+https://calendly.com/codingtalks123/30min
+sec-ch-ua:
+"Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"
+sec-ch-ua-mobile:
+?0
+sec-ch-ua-platform:
+"Linux"
+sec-fetch-dest:
+empty
+sec-fetch-mode:
+cors
+sec-fetch-site:
+same-origin
+user-agent:
+Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
+
+
+
+Response:
+{
+    "another_event_button_content": "Schedule another event",
+    "another_event_button_enabled": false,
+    "availability_timezone": "Asia\/Calcutta",
+    "booking_autofill": false,
+    "booking_method": "instant",
+    "color": "#8247f5",
+    "confirmation_page_type": "internal",
+    "custom_fields": [
+        {
+            "id": 191274443,
+            "name": "Please share anything that will help prepare for our meeting.",
+            "format": "text",
+            "required": false,
+            "position": 0,
+            "answer_choices": null,
+            "include_other": false
+        }
+    ],
+    "custom_links": [],
+    "description": null,
+    "display_group_occupancy": false,
+    "duration": 30,
+    "duration_options": null,
+    "edit_path": "\/event_types\/185061624\/edit",
+    "end_date": null,
+    "external_availability_processing_type": "parallel",
+    "guests_allowed": true,
+    "has_active_payment_method": false,
+    "hide_location": false,
+    "id": 185061624,
+    "ignore_location_configurations": false,
+    "integrations": {
+        "mailchimp": {
+            "show_invitee_consent": false
+        }
+    },
+    "invitee_name_format": "combined",
+    "is_owner": true,
+    "is_paypal_email_unconfirmed": false,
+    "kind": "solo",
+    "kind_name": "one_on_one",
+    "last_availability": "2025-06-23T12:55:00.000000+05:30",
+    "link_interstitials_enabled": true,
+    "locale": "en",
+    "location_configurations": [
+        {
+            "id": 908966196,
+            "kind": "google_conference",
+            "position": 0,
+            "location": null,
+            "conferencing_configured": true,
+            "data": "SC1SQ6BuKWMCMF9PU8TjkDsVV8XMKszNjA3DirhDxhN4DIw\/IJilQ9dYQI2BK7R1CgkJ\/1UzZXR0lpvBCn77j1vYcEchLCxN8zPh7XpFauLmuwN1GqUbL64hUXNgKmxPoXGB4r\/JKJO7NbW4Cp9dsNfTgWfA6R+umJrM6mql5FSgMsONBUQAhFF8N9yopQ==--4CvhgC1zU3GV6lU2--IWB5sKM68y9j6hY9Tlf6Iw=="
+        }
+    ],
+    "location_label": null,
+    "lock_timezone_content": "",
+    "lock_timezone_enabled": false,
+    "max_booking_time": 86400,
+    "multi_publisher": false,
+    "name": "30 Minute Meeting",
+    "next_availability": "2025-04-24T09:00:00.000000+05:30",
+    "organization": {
+        "uuid": "e1dbefd2-f2ec-4747-993a-d18bed7431da",
+        "logo_url": null
+    },
+    "owner_type": "User",
+    "owning_user": {
+        "id": 42855364,
+        "uuid": "c524b0f0-738f-45c4-b025-6be72a2acf9b"
+    },
+    "payment_account": null,
+    "payment_method": null,
+    "period_type": "moving",
+    "policy": {
+        "edit": true,
+        "member": true,
+        "diagnostics": true
+    },
+    "pooling_type": null,
+    "profile": {
+        "id": 43215323,
+        "avatar_url": null,
+        "description": "Welcome to my scheduling page. Please follow the instructions to add an event to my calendar.",
+        "is_landing_page": false,
+        "locale": "en",
+        "logo_url": null,
+        "name": "Mohit Puri",
+        "organization_uuid": "e1dbefd2-f2ec-4747-993a-d18bed7431da",
+        "owner_type": "User",
+        "owning_user": {
+            "id": 42855364,
+            "uuid": "c524b0f0-738f-45c4-b025-6be72a2acf9b"
+        },
+        "slug": "codingtalks123",
+        "timezone": "Asia\/Calcutta",
+        "unavailability_reason": null,
+        "unbranded": false
+    },
+    "public": true,
+    "publisher_avatar": null,
+    "publishers_list": "Mohit Puri",
+    "redirect_configuration": null,
+    "scheduling_link": {
+        "uid": "cq9j-96v-mxr",
+        "owner_type": "Share",
+        "url": "https:\/\/calendly.com\/d\/cq9j-96v-mxr\/30-minute-meeting"
+    },
+    "show_custom_links": false,
+    "sms_legal_disclaimer": null,
+    "sms_reminder_enabled": false,
+    "spotpicker_type": "Spotpicker",
+    "start_date": null,
+    "type": "StandardEventType",
+    "unavailability_reason": null,
+    "unbranded": false,
+    "uuid": "fd5a2cfd-a271-417f-8003-fd5a10f4ee08"
+}

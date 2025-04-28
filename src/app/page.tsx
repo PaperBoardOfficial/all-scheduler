@@ -1,103 +1,151 @@
-import Image from "next/image";
+"use client";
+
+import { useState } from "react";
+import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
+import axios from "axios";
+import CalendarForm from "@/components/CalendarForm";
+import SlotList from "@/components/SlotList";
+import ErrorMessage from "@/components/ErrorMessage";
+import ActionButton from "@/components/ActionButton";
+import {
+  AvailableEventsResponse,
+  BookingResponse,
+  ErrorResponse,
+} from "./api/scheduler/utils/providers";
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+  // State
+  const [calendarLink, setCalendarLink] = useState<string>("");
+  const [name, setName] = useState<string>("");
+  const [email, setEmail] = useState<string>("");
+  const [selectedSlot, setSelectedSlot] = useState<string | null>(null);
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+  // React Query setup
+  const queryClient = useQueryClient();
+
+  // Query for fetching available slots
+  const slotsQuery = useQuery({
+    queryKey: ["availableSlots", calendarLink],
+    queryFn: async () => {
+      const response = await axios.post<AvailableEventsResponse>(
+        "/api/scheduler/available-events",
+        {
+          calendarLink,
+        }
+      );
+      return response.data.availableEvents;
+    },
+    enabled: false,
+    retry: 1, // Limit retries for API failures
+  });
+
+  // Mutation for booking events
+  const bookMutation = useMutation({
+    mutationFn: async () => {
+      if (!selectedSlot) {
+        throw new Error("No slot selected");
+      }
+
+      const response = await axios.post<BookingResponse>(
+        "/api/scheduler/book-event",
+        {
+          calendarLink,
+          dateTime: selectedSlot,
+          name,
+          email,
+        }
+      );
+
+      return response.data.success;
+    },
+    onSuccess: () => {
+      alert("Event booked successfully!");
+      setCalendarLink("");
+      setName("");
+      setEmail("");
+      setSelectedSlot(null);
+      queryClient.removeQueries({ queryKey: ["availableSlots"] });
+    },
+    onError: (error: any) => {
+      // Display more specific error from API if available
+      let errorMessage = "Unknown error occurred";
+
+      if (axios.isAxiosError(error) && error.response?.data) {
+        const errorResponse = error.response.data as ErrorResponse;
+        errorMessage =
+          errorResponse.message || errorResponse.error || error.message;
+      } else if (error instanceof Error) {
+        errorMessage = error.message;
+      }
+
+      alert(`Failed to book event: ${errorMessage}`);
+    },
+  });
+
+  // Event handlers
+  const handleGetAvailableSlots = async () => {
+    if (!calendarLink) {
+      alert("Please enter a calendar link");
+      return;
+    }
+
+    if (!name || !email) {
+      alert("Please fill in your name and email");
+      return;
+    }
+
+    slotsQuery.refetch();
+  };
+
+  const handleBookEvent = async () => {
+    if (!selectedSlot) {
+      alert("Please select a slot first");
+      return;
+    }
+
+    bookMutation.mutate();
+  };
+
+  // Derived state
+  const availableSlots = slotsQuery.data || [];
+  const loading =
+    slotsQuery.isLoading || slotsQuery.isFetching || bookMutation.isPending;
+  const error = slotsQuery.error || bookMutation.error;
+
+  return (
+    <div className="min-h-screen p-8 max-w-3xl mx-auto">
+      <h1 className="text-2xl font-bold mb-6">Schedule an Event</h1>
+
+      <div className="space-y-6">
+        <CalendarForm
+          calendarLink={calendarLink}
+          name={name}
+          email={email}
+          loading={loading}
+          onCalendarLinkChange={setCalendarLink}
+          onNameChange={setName}
+          onEmailChange={setEmail}
+        />
+
+        <ErrorMessage error={error} />
+
+        <ActionButton
+          onClick={handleGetAvailableSlots}
+          disabled={loading}
+          isLoading={slotsQuery.isFetching}
+          loadingText="Loading..."
+          defaultText="Get Available Slots"
+        />
+
+        <SlotList
+          availableSlots={availableSlots}
+          selectedSlot={selectedSlot}
+          loading={loading}
+          onSelectSlot={setSelectedSlot}
+          onBookEvent={handleBookEvent}
+          isBooking={bookMutation.isPending}
+        />
+      </div>
     </div>
   );
 }
