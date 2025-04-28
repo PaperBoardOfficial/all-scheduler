@@ -66,7 +66,7 @@ export default function Home() {
       setSelectedSlot(null);
       queryClient.removeQueries({ queryKey: ["availableSlots"] });
     },
-    onError: (error: any) => {
+    onError: (error: Error | unknown) => {
       // Display more specific error from API if available
       let errorMessage = "Unknown error occurred";
 
