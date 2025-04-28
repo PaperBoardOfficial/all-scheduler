@@ -31,7 +31,7 @@ export interface CalendlyBookEventRequest {
       location?: string | null;
       data?: string;
     };
-    guests: any[];
+    guests: Array<{ email: string; full_name?: string }>;
   };
   invitee: {
     timezone: string;

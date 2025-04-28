@@ -59,7 +59,7 @@ class CalendlyService extends SchedulerBaseService {
         eventType,
         locationConfig
       );
-      const response = await this.sendBookingRequest(bookingPayload);
+      await this.sendBookingRequest(bookingPayload);
       return {
         success: true,
         message: "Event booked successfully",
