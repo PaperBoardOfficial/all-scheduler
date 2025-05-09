@@ -13,10 +13,15 @@ class CalendlyService extends SchedulerBaseService {
   private profileSlug: string;
   private eventTypeSlug: string;
 
-  constructor(url: string) {
+  constructor(calendarLink: string) {
     super();
-    this.profileSlug = url.split("/")[3];
-    this.eventTypeSlug = url.split("/")[4];
+    const cleanLink = calendarLink.replace(/\/+$/, "");
+    const urlParts = cleanLink.split("/").filter(Boolean);
+    if (urlParts.length < 2) {
+      throw new Error("Invalid calendar link format");
+    }
+    this.profileSlug = urlParts[urlParts.length - 2];
+    this.eventTypeSlug = urlParts[urlParts.length - 1];
   }
 
   public async getAvailableEvents(): Promise<string[]> {
