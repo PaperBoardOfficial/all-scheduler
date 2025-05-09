@@ -7,7 +7,6 @@ import { CalAvailableSlotsResponse, CalTimeSlot } from "@/types/cal";
 class CalService extends SchedulerBaseService {
   private username: string;
   private eventTypeSlug: string;
-  private apiKey: string = process.env.NEXT_PUBLIC_CAL_API_KEY || "";
   private baseUrl: string = "https://api.cal.com/v2";
 
   constructor(calendarLink: string) {
@@ -28,7 +27,6 @@ class CalService extends SchedulerBaseService {
         `${this.baseUrl}/slots?eventTypeSlug=${this.eventTypeSlug}&username=${this.username}&start=${dateRange.startDate}&end=${dateRange.endDate}&timeZone=Asia/Kolkata`,
         {
           headers: {
-            Authorization: `Bearer ${this.apiKey}`,
             "Content-Type": "application/json",
             "cal-api-version": "2024-09-04",
           },
@@ -103,7 +101,6 @@ class CalService extends SchedulerBaseService {
         bookingPayload,
         {
           headers: {
-            Authorization: `Bearer ${this.apiKey}`,
             "Content-Type": "application/json",
             "cal-api-version": "2024-08-13",
           },
